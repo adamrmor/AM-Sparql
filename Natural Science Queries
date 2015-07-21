@@ -1,0 +1,24 @@
+Natural Science Queries 
+
+# Finds all Type Specimens in the Marine Collection.
+PREFIX am:<http://rdf.aucklandmuseum.com/>
+PREFIX ecrm:<http://erlangen-crm.org/current#>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+
+SELECT * WHERE {
+    ?s ecrm:P50_has_current_keeper/rdf:value "Marine" .
+    ?s dwc:typeStatus ?b.
+  ?s am:displayClassification ?c
+
+}
+
+#Finds Long Lat of all Objects with Classificarion 64842 ("murdochi")
+PREFIX am:<http://rdf.aucklandmuseum.com/>
+PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX ecrm:<http://erlangen-crm.org/current#>
+
+SELECT *  WHERE {
+    ?s am:classification <http://rdf.aucklandmuseum.com/vernon/classification/64842> .
+    OPTIONAL { ?s ecrm:P53_has_former_or_current_location/geo-pos:lat ?latitude } .
+    OPTIONAL { ?s ecrm:P53_has_former_or_current_location/geo-pos:long ?longitude } .
+}

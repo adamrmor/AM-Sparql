@@ -1,0 +1,10 @@
+Cenotaph Queries
+
+# Total number of Cenotaph records
+PREFIX am: <http://rdf.aucklandmuseum.com/>
+SELECT (count(distinct ?subject) as ?subject_count) WHERE {
+GRAPH ?g {
+?subject rdf:type am:MilitaryPerson .
+}
+FILTER (?g != <http://rdf.aucklandmuseum.com/metadata>)
+}

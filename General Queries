@@ -1,1 +1,22 @@
+#Keyword search for "place" return any pictorial record with an image.
+PREFIX ecrm:<http://erlangen-crm.org/current#>
+PREFIX am: <http://rdf.aucklandmuseum.com/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT * WHERE {
+   ?subject dc:title/rdf:value ?title. #select the value in the title field for searching.
+   FILTER(REGEX(?title, "parnell", "i")) #within the title look for the word "parnell", the "i" = case insensitive
+   ?subject ecrm:P50_has_current_keeper/rdf:value "photographs". #searches the photography department
+   ?subject ecrm:P138_has_representation ?photo. #only show records with images. 
 
+}
+Show all objects on display ordered by gallery
+PREFIX ecrm:<http://erlangen-crm.org/current#>
+PREFIX am: <http://rdf.aucklandmuseum.com/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT * WHERE {
+  ?subject am:onDisplayFlag ?display. #is item on display
+  ?subject am:nameTitle/rdf:value ?title. #what is title of object
+  ?subject ecrm:P50_has_current_keeper/rdf:value ?dept. # what is department of object 
+}
+ORDER BY ?display ?dept

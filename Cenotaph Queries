@@ -8,3 +8,9 @@ GRAPH ?g {
 }
 FILTER (?g != <http://rdf.aucklandmuseum.com/metadata>)
 }
+
+#search on service number
+SELECT *  WHERE {
+?person am:serviceNumber/rdf:value ?Service.
+  FILTER (regex(?Service, "1234","i")) 
+}

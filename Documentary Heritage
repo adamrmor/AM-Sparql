@@ -1,0 +1,15 @@
+Documentary Heritage
+
+# Find all Library records - show title and creator/
+
+SELECT  * WHERE {
+?object rdf:type ecrm:E84_Information_Carrier.
+?object am:creator ?creator.
+?object ecrm:P102_has_title/rdf:value ?title .
+}
+limit 100
+
+
+
+
+

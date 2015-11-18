@@ -18,12 +18,11 @@ Land mammals
 Marine
 Reptiles and Amphibians / Land vertebrates
 
-**
 
 Human History
 -------------
 
-**
+
 
     rdf:type: ecrm:E22_Man-Made_Object
 
@@ -50,18 +49,18 @@ Ephemera
 Manuscripts and archives
 Paintings
 
-**
+
 
 People
 ======
 
-**
+
 
      rdf:type: ecrm:E21_Person
 
 **Cenotaph**
 ========
 
-rdf:type: am:MilitaryPerson
+    rdf:type: am:MilitaryPerson
 
 *The Online Cenotaph is a biographical database that pulls together information relating to individual service people from a huge range of sources such as embarkation, military service and other government records, newspapers and families. It will eventually provide a page for every person who has served our country during times of international and national conflict.*

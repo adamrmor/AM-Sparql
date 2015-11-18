@@ -20,8 +20,7 @@ Reptiles and Amphibians / Land vertebrates
 
 
 Human History
--------------
-
+================
 
 
     rdf:type: ecrm:E22_Man-Made_Object
@@ -36,7 +35,9 @@ Maori Ethnology
 History
 Applied arts and design
 Archaeology
+
 Documentary Heritage
+================
 
     rdf:type: ecrm:E84_Information_Carrier
 

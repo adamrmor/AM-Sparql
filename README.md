@@ -1,9 +1,8 @@
-**
+Auckland Museum SPARQL Endpoint.
+================
 
 Natural Sciences
 ================
-
-**
 
     rdf:type: ecrm:E20_Biological_Object
 

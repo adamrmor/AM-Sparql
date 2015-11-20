@@ -14,3 +14,9 @@ SELECT *  WHERE {
 ?person am:serviceNumber/rdf:value ?Service.
   FILTER (regex(?Service, "1234","i")) 
 }
+
+# Retrieve a list of all units
+
+Select distinct * WHERE {
+?a rdf:type am:MilitaryUnit
+?a rdf:value ?name

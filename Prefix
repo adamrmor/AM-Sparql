@@ -1,16 +1,9 @@
-PREFIX am:<http://rdf.aucklandmuseum.com/>
-PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dc:<http://purl.org/dc/elements/1.1/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX geo-ont:<http://www.geonames.org/ontology#>
 PREFIX ecrm:<http://erlangen-crm.org/current#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX dbp-ont:<http://dbpedia.org/ontology/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-prefix rda-carrier: <http://www.rdaregistry.info/termList/RDACarrierType/#>
-prefix rda-content: <http://rdvocab.info/termList/RDAContentType/>
-prefix rda-media: <http://rdvocab.info/termList/RDAMediaType/>
-prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
-prefix am-geopos:<http://rdf.aucklandmuseum.com/ontology/geopos#>
-prefix dc: <http://purl.org/dc/elements/1.1/>
-prefix bibo: <http://purl.org/ontology/bibo/>
-
+PREFIX am:<http://rdf.aucklandmuseum.com/>
+PREFIX dwc:<http://rs.tdwg.org/dwc/terms/>
+PREFIX tsp: <http://rs.tdwg.org/ontology/voc/Specimen#>
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>

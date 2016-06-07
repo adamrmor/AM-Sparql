@@ -1,0 +1,25 @@
+#Find all medals from the Crimean War
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "period",
+            "query": {
+              "match": {
+                "period.time_period.text": "Crimean"
+              }
+            }
+          }
+        },
+        {
+          "match": {
+            "dc_title": "medal"
+          }
+        }
+      ]
+    }
+  }
+}
+

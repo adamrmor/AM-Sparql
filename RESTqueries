@@ -23,3 +23,17 @@
   }
 }
 
+# Find all objects by date range
+{
+"from" : 0, "size" : 20000,
+"fields" : ["lastModifiedOn", "_id"],
+"query" :{
+    "range" : {
+        "lastModifiedOn" : {
+            "gte": "18/08/2016",
+            "lte": "20/08/2016",
+            "format": "dd/MM/yyyy||dd/MM/yyyy"
+        }
+    }
+}
+}

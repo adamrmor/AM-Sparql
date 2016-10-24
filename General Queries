@@ -20,3 +20,18 @@ SELECT * WHERE {
   ?subject ecrm:P50_has_current_keeper/rdf:value ?dept. # what is department of object 
 }
 ORDER BY ?display ?dept
+
+
+
+Accession date by year.
+PREFIX am: <http://collections.aucklandmuseum.com/ontology/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year (COUNT (DISTINCT ?a) AS ?count) WHERE {
+?a am:accessionDateEarliest ?date.
+  
+  
+BIND(year(?date) AS ?year)
+} GROUP BY ?year ORDER BY ?year
+
+ 

@@ -34,4 +34,16 @@ SELECT ?year (COUNT (DISTINCT ?a) AS ?count) WHERE {
 BIND(year(?date) AS ?year)
 } GROUP BY ?year ORDER BY ?year
 
+
+Field Collection By Date
+PREFIX am: <http://collections.aucklandmuseum.com/ontology/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+
+SELECT ?year (COUNT (DISTINCT ?a) AS ?count) WHERE {
+?a ecrm:P24i_changed_ownership_through/ecrm:P4_has_time_span/am:fieldCollectionDateEarliest ?date.
+  
+  
+BIND(year(?date) AS ?year)
+} GROUP BY ?year ORDER BY ?year
  
